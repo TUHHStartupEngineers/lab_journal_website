@@ -11,7 +11,7 @@
 
 <meta name="author" content="Joschka Schwarz" />
 
-<meta name="date" content="2020-06-15" />
+<meta name="date" content="2020-10-19" />
 
 <title>Dictionary</title>
 
@@ -28,6 +28,15 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -406,7 +415,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Dictionary</h1>
 <h4 class="author">Joschka Schwarz</h4>
-<h4 class="date">2020-06-15</h4>
+<h4 class="date">2020-10-19</h4>
 
 </div>
 
@@ -432,11 +441,11 @@ div.tocify {
 ##  [3] &quot;data_wrangling.Rmd&quot;        &quot;dictionary.Rmd&quot;           
 ##  [5] &quot;docs&quot;                      &quot;ggplot_graphs.Rmd&quot;        
 ##  [7] &quot;images&quot;                    &quot;index.Rmd&quot;                
-##  [9] &quot;journal_cache&quot;             &quot;journal_files&quot;            
-## [11] &quot;journal.Rmd&quot;               &quot;lab_journal_website.Rproj&quot;
-## [13] &quot;links.Rmd&quot;                 &quot;machine_learning.Rmd&quot;     
-## [15] &quot;README.md&quot;                 &quot;site_libs&quot;                
-## [17] &quot;style.css&quot;                 &quot;testfile.rds&quot;</code></pre>
+##  [9] &quot;journal_files&quot;             &quot;journal.Rmd&quot;              
+## [11] &quot;lab_journal_website.Rproj&quot; &quot;links.Rmd&quot;                
+## [13] &quot;machine_learning.Rmd&quot;      &quot;README.md&quot;                
+## [15] &quot;site_libs&quot;                 &quot;style.css&quot;                
+## [17] &quot;testfile.rds&quot;</code></pre>
 <p>…</p>
 <hr />
 </div>
@@ -494,8 +503,6 @@ df</code></pre>
 </ol>
 <pre class="r"><code>col_C  &lt;- c(TRUE, FALSE, FALSE, TRUE)
 df_new &lt;- rbind(df, col_C)</code></pre>
-<pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, ri, value = FALSE): invalid factor level, NA
-## generated</code></pre>
 </div>
 <div id="slicing-and-extracting-data-indexing-vectors" class="section level2">
 <h2><span class="header-section-number">1.4</span> Slicing and extracting data indexing vectors</h2>
@@ -600,19 +607,19 @@ plot(x)</code></pre>
 <h2><span class="header-section-number">1.14</span> Distributions</h2>
 <p>rnorm() This function inserts a normal distribution.</p>
 <pre class="r"><code>rnorm(100, mean = 50, sd=2)</code></pre>
-<pre><code>##   [1] 53.60180 53.82160 51.28182 52.16004 49.21557 45.86711 48.04301 49.26599
-##   [9] 49.18406 47.03106 51.34081 51.25063 49.50617 47.49870 50.67426 48.71800
-##  [17] 48.83063 53.43981 50.92244 48.76792 47.76789 51.15613 49.60354 46.61661
-##  [25] 49.03180 48.54577 46.71730 53.07750 51.36456 52.46412 51.34934 52.11305
-##  [33] 50.71025 50.33237 51.50870 51.31102 51.68068 48.53228 49.23290 50.77318
-##  [41] 48.29871 47.70570 51.65960 48.42539 51.85052 51.38392 50.33263 46.69005
-##  [49] 48.99431 48.47159 49.73792 50.45342 49.16057 50.23682 48.92481 47.49996
-##  [57] 50.37251 53.09274 47.26904 52.01589 48.92810 47.77027 51.21524 48.84225
-##  [65] 45.31989 51.08402 46.99535 47.69306 48.71812 50.66630 49.17569 50.00153
-##  [73] 52.48018 49.78574 50.25993 50.23075 50.80664 48.44780 47.89669 48.31461
-##  [81] 52.34741 51.62290 49.21648 49.00518 46.57177 50.43814 46.13397 52.69903
-##  [89] 50.98591 51.86887 52.41555 49.96453 46.25805 55.34728 49.41420 47.50719
-##  [97] 51.63510 45.90328 49.94012 50.15856</code></pre>
+<pre><code>##   [1] 54.22863 48.70809 51.24061 49.30069 50.05745 47.52105 53.38770 49.23244
+##   [9] 48.18789 51.67059 50.57012 46.30994 50.66855 53.22213 51.21435 53.09137
+##  [17] 48.63324 50.46889 50.37948 48.20602 45.40871 48.87367 51.87177 51.32971
+##  [25] 50.56047 50.50575 49.87310 50.83291 48.20004 51.00883 48.41564 48.53489
+##  [33] 48.44830 52.40945 48.91585 51.64154 49.80436 53.39485 52.79370 46.98983
+##  [41] 49.62841 48.92764 44.63988 52.76083 54.31879 47.47666 52.59671 50.02736
+##  [49] 48.16268 48.20523 49.21300 48.77791 49.21280 49.16939 50.83109 47.26649
+##  [57] 50.41649 51.10425 49.99673 50.19569 52.43560 50.37162 51.57319 53.30574
+##  [65] 52.35455 48.99787 47.09420 48.66763 45.34368 50.36813 50.10100 46.71990
+##  [73] 48.73592 47.20078 50.12611 50.68024 48.92994 50.78554 50.29880 54.03396
+##  [81] 52.72627 51.42869 48.12855 51.85393 49.84924 49.72425 49.83057 46.93583
+##  [89] 46.52453 52.51327 48.60386 50.06687 52.23993 51.52621 50.56571 50.46053
+##  [97] 46.87195 51.26991 48.47722 44.82096</code></pre>
 </div>
 </div>
 
@@ -671,7 +678,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

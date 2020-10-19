@@ -24,6 +24,15 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -325,10 +334,15 @@ $(document).ready(function () {
 <h1>Example</h1>
 <p>To explore the basic data manipulation verbs of dplyr, we’ll use nycflights13::flights. This data frame contains all 336,776 flights that departed from New York City in 2013. The data comes from the US Bureau of Transportation Statistics, and is documented in ?flights.</p>
 <pre class="r"><code>if (!require(nycflights13)) {
-  install.packages(&quot;nycflights13&quot;)
+  install.packages(&quot;nycflights13&quot;,repos = &quot;http://cran.us.r-project.org&quot;)
   library(nycflights13)
-}
-library(dplyr)
+}</code></pre>
+<pre><code>## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called &#39;nycflights13&#39;</code></pre>
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/nk/dlpy2zvd7q31vzf9__jv04s80000gn/T//Rtmph6teDb/downloaded_packages</code></pre>
+<pre class="r"><code>library(dplyr)
 
 flights</code></pre>
 <pre><code>## # A tibble: 336,776 x 19

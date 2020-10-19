@@ -1,6 +1,6 @@
 ---
 title: "Journal (reproducible report)"
-author: "Joschka Schwarz"
+author: "Oliver Mork"
 date: "04/01/2020"
 output:
   html_document:
