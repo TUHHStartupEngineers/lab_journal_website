@@ -25,4 +25,14 @@ flights
 filter(flights, month == 1, day == 1)
 ```
 
+```{r, eval = TRUE}
+numbers <- 1:1000
+
+# This will print the first 10 elements of the vector numbers
+numbers[1:10]
+
+# This will plot a histogram of 100 random elements of the vector numbers
+hist(sample(numbers, 100, replace = T))
+```
+
 ...
